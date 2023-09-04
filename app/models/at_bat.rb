@@ -1,6 +1,7 @@
 class AtBat < ApplicationRecord
+  extend ActiveHash::Associations::ActiveRecordExtensions
 
-  validates :player_id, :game_id, :turn_number, :out_count_id, :runner_id, :batting_id, :pitch_type_id, :pitch_course_id, presence: true
+  validates :player, :game, :turn_number, :out_count_id, :runner_id, :batting_id, :pitch_type_id, :pitch_course_id, presence: true
   validates :out_count_id, :runner_id, :batting_id, :pitch_type_id, :pitch_course_id, numericality: { other_than: 1, message: "can't be blank" }
   validates :turn_number, numericality: { only_integer: true, message: "は半角数字のみ使用してください" }
 
