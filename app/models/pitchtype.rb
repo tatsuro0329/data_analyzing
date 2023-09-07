@@ -1,4 +1,4 @@
-class Pitch_type < ActiveHash::Base
+class Pitchtype < ActiveHash::Base
   self.data = [
     { id: 1, name: '---' },
     { id: 2, name: 'ストレート' },

@@ -16,11 +16,11 @@ class Batting < ActiveHash::Base
     { id: 14, name: '空振り三振' },
     { id: 15, name: '見逃し三振' },
     { id: 16, name: '振り逃げ' },
-    { id: 16, name: '四球' },
-    { id: 16, name: '故意四球' },
-    { id: 16, name: '死球' },
-    { id: 16, name: '打撃妨害' },
-    { id: 16, name: '併殺打' }
+    { id: 17, name: '四球' },
+    { id: 18, name: '故意四球' },
+    { id: 19, name: '死球' },
+    { id: 20, name: '打撃妨害' },
+    { id: 21, name: '併殺打' }
   ]
 
 end

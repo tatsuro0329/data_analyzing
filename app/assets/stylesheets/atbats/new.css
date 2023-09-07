@@ -1,0 +1,77 @@
+.form-container_atbats_new {
+  padding: 40px;
+  border-radius: 5px;
+  max-width: 1200px;
+  display: flex;
+}
+
+/* フォーム全体のスタイル */
+.atbat-form {
+  padding: 40px;
+  border-radius: 5px;
+  max-width: 1200px;
+}
+
+.at_bat_text{
+  color: #ccc;
+}
+
+/* 各フィールドのスタイル */
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #fff; /* 文字色を白に設定 */
+}
+
+/* ボタンのスタイル */
+.form-button {
+  background-color: gray;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+/* 打席データのスタイル */
+.atbat-data {
+  margin: 20px;
+  box-sizing: border-box;
+}
+
+
+/* 打席データフィールドのスタイル */
+.atbat-data .form-label {
+  color: #fff; /* 文字色を白に設定 */
+}
+
+.atbat-data .form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* ボタンを含む親要素のスタイル */
+.form-button_games_new {
+  text-align: center; /* ボタンを水平中央に配置 */
+}
+
+/* ボタンのスタイル */
+.form-button {
+  background-color: gray;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

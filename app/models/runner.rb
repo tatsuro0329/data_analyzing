@@ -7,7 +7,8 @@ class Runner < ActiveHash::Base
     { id: 5, name: '走者1･2塁' },
     { id: 6, name: '走者3塁' },
     { id: 7, name: '走者1･3塁' },
-    { id: 8, name: '走者満塁' }
+    { id: 8, name: '走者2･3塁' },
+    { id: 9, name: '走者満塁' }
   ]
 
 end

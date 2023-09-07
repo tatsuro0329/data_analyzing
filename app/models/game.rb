@@ -1,7 +1,7 @@
 class Game < ApplicationRecord
 
-  validates :date, :vs, :stadium, presence: true
+  validates :name, :date, :vs, :stadium, presence: true
 
-  has_many :at_bats
+  has_many :atbats
 
 end

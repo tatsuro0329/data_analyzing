@@ -1,0 +1,65 @@
+/* ページ全体のスタイル */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  color: #000 !important; /* テキストカラーを黒に変更 */
+}
+
+.page-title {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* 試合一覧のテーブル */
+.game-table {
+  border-collapse: collapse;
+  width: 90%; /* 幅を調整 */
+  background-color: #fff;
+  margin: 20px auto; /* 中央寄せ */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.game-table th,
+.game-table td {
+  padding: 8px; /* パディングを調整 */
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.game-table th {
+  background-color: #333;
+  color: #fff;
+}
+
+.game-row:hover {
+  background-color: #f2f2f2;
+}
+
+/* 打席一覧のテーブル */
+.atbat-table {
+  border-collapse: collapse;
+  width: 90%; /* 幅を調整 */
+  background-color: #fff;
+  margin: 20px auto; /* 中央寄せ */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.atbat-table th,
+.atbat-table td {
+  padding: 8px; /* パディングを調整 */
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.atbat-table th {
+  background-color: #333;
+  color: #fff;
+}
+
+.atbat-row:hover {
+  background-color: #f2f2f2;
+}

@@ -1,0 +1,46 @@
+.form-container_games_new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-form {
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.field {
+  margin-bottom: 10px;
+}
+
+.form-label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-label_name,
+.form-label_vs,
+.form-label_stadium,
+.form-label_date {
+  color: #fff;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-button_games_new {
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+

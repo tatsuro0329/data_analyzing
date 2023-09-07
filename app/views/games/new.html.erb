@@ -1,0 +1,35 @@
+<%= render "shared/header" %>
+
+<div class="form-container_games_new">
+  <%= form_with model: @game, url: games_path, local: true, class: "game-form" do |f| %>
+    <%# <%= render partial: "shared/error_messages", locals: { object: f.object } %> 
+
+    <!-- 選手 -->
+    <div class="field player-name-field">
+      <%= f.label :name, "選手名", class: "form-label_name" %>
+      <%= f.text_field :name, class: "form-input" %>
+    </div>
+
+    <!-- 試合 -->
+    <div class="field game-date-field">
+      <%= f.label :date, "試合日", class: "form-label_date" %>
+      <%= f.date_select :date, class: "form-input" %>
+    </div>
+    <div class="field opponent-field">
+      <%= f.label :vs, "対戦相手", class: "form-label_vs" %>
+      <%= f.text_field :vs, class: "form-input" %>
+    </div>
+    <div class="field stadium-field">
+      <%= f.label :stadium, "グラウンド", class: "form-label_stadium" %>
+      <%= f.text_field :stadium, class: "form-input" %>
+    </div>
+   
+    <div class="form-button_games_new">
+    <%= f.submit "保存" %>
+    </div>
+
+  <% end %>
+</div>
+
+
+<%= render "shared/footer" %>
