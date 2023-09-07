@@ -1,0 +1,57 @@
+<%= render "shared/header" %>
+
+<h1 class="page-title">試合一覧</h1>
+
+<table class="game-table">
+  <% @games.each do |game| %>
+    <thead>
+      <tr>
+        <th class="game-name">選手</th>
+        <th class="game-date">試合日</th>
+        <th class="opponent">対戦相手</th>
+        <th class="stadium">グラウンド</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="game-row">
+        <td class="game-name"><%= game.name %></td>
+        <td class="game-date"><%= game.date %></td>
+        <td class="opponent"><%= game.vs %></td>
+        <td class="stadium"><%= game.stadium %></td>
+      </tr>
+      <tr class="atbat-info">
+        <td colspan="4">
+          <h2 class="atbat-title">打席一覧</h2>
+          <table class="atbat-table">
+            <thead>
+              <tr>
+                <th class="turn-number">打席</th>
+                <th class="outcount">アウトカウント</th>
+                <th class="runner-status">ランナー状況</th>
+                <th class="hit-direction">打球方向</th>
+                <th class="batting-result">打席結果</th>
+                <th class="pitch-type">変化球</th>
+                <th class="pitch-course">コース</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% game.atbats.each do |atbat| %>
+                <tr class="atbat-row">
+                  <td class="turn-number"><%= atbat.turn_number %></td>
+                  <td class="outcount"><%= atbat.outcount.name %></td>
+                  <td class="runner-status"><%= atbat.runner.name %></td>
+                  <td class="hit-direction"><%= atbat.position&.name || '' %></td>
+                  <td class="batting-result"><%= atbat.batting.name %></td>
+                  <td class="pitch-type"><%= atbat.pitchtype.name %></td>
+                  <td class="pitch-course"><%= atbat.pitchcourse.name %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  <% end %>
+</table>
+
+<%= render "shared/footer" %>

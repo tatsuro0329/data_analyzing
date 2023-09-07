@@ -1,4 +1,4 @@
-class Pitch_course < ActiveHash::Base
+class Pitchcourse < ActiveHash::Base
   self.data = [
     { id: 1, name: '---' },
     { id: 2, name: '内角高め' },

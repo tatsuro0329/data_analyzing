@@ -1,0 +1,58 @@
+<%= render "shared/header" %>
+
+  <%= form_with model: @at_bat, url: atbats_path, local: true, class: "atbat-form" do |f| %>
+    <%# <%= render partial: 'shared/error_messages', locals: { model: @atbat } %> 
+      <%= f.label :game_id, "試合", class: "form-label" %>
+      <%= f.collection_select :game_id, Game.all, :id, :date, prompt: "---", class: "form-input" %>
+        
+        <div class="form-container_atbats_new">
+          <!-- 打席データ -->
+          <% 2.times do |index| %>
+            <div class="atbat-data">
+              <%= f.fields_for "at_bats[#{index}]", Atbat.new do |at_bat_fields| %>
+
+                <div class="input-group turn-number">
+                  <%= at_bat_fields.label :turn_number, "打席", class: "form-label" %>
+                  <%= at_bat_fields.number_field :turn_number, class: "form-input" %>
+                </div>
+
+                <div class="input-group outcount">
+                  <%= at_bat_fields.label :outcount_id, "アウトカウント", class: "form-label" %>
+                  <%= at_bat_fields.select :outcount_id, Outcount.data.map { |o| [o[:name], o[:id]] }, prompt: "---", class: "form-input" %>
+                </div>
+
+                <div class="input-group runner">
+                  <%= at_bat_fields.label :runner_id, "ランナー状況", class: "form-label" %>
+                  <%= at_bat_fields.select :runner_id, Runner.data.map { |r| [r[:name], r[:id]] }, prompt: "---", class: "form-input" %>
+                </div>
+
+                <div class="input-group position">
+                  <%= at_bat_fields.label :position_id, "打球方向", class: "form-label" %>
+                  <%= at_bat_fields.select :position_id, Position.data.map { |p| [p[:name], p[:id]] }, prompt: "---", class: "form-input" %>
+                </div>
+
+                <div class="input-group batting">
+                  <%= at_bat_fields.label :batting_id, "打席結果", class: "form-label" %>
+                  <%= at_bat_fields.select :batting_id, Batting.data.map { |b| [b[:name], b[:id]] }, prompt: "---", class: "form-input" %>
+                </div>
+
+                <div class="input-group pitchtype">
+                  <%= at_bat_fields.label :pitchtype_id, "変化球", class: "form-label" %>
+                  <%= at_bat_fields.select :pitchtype_id, Pitchtype.data.map { |pt| [pt[:name], pt[:id]] }, prompt: "---", class: "form-input" %>
+                </div>
+
+                <div class="input-group pitchcourse">
+                  <%= at_bat_fields.label :pitchcourse_id, "コース", class: "form-label" %>
+                  <%= at_bat_fields.select :pitchcourse_id, Pitchcourse.data.map { |pc| [pc[:name], pc[:id]] }, prompt: "---", class: "form-input" %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+
+      <div class="form-button_games_new">
+        <%= f.submit "保存" %>
+      </div>
+  <% end %>
+
+<%= render "shared/footer" %>
