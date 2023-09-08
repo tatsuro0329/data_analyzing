@@ -79,6 +79,10 @@ Pythonでグラフの表示や、CSVファイルの取得をできるように�
   あくまでもnameと”試合情報”は区別して保存し、nameのみで絞る場合、試合情報から絞る場合両方に  
   対応できる設計にする必要があります。
 
+### ER図  
+
+[![Image from Gyazo](https://i.gyazo.com/27a5f3f937aed223e22ec8d753165f0e.png)](https://gyazo.com/27a5f3f937aed223e22ec8d753165f0e)
+
 # テーブル設計
 
 ## games テーブル
