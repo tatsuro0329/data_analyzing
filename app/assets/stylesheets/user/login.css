@@ -1,0 +1,21 @@
+h2{
+  color: white;
+}
+
+.field label {
+  color: white; /* ラベルのテキストを白に */
+}
+
+.field input[type="email"],
+.field input[type="password"],
+.field input[type="text"] {
+  color: black; /* テキスト入力フィールドのテキストを白に */
+}
+
+.shared-link {
+  color: white; /* リンクテキストを白に設定 */
+}
+
+a {
+  color: white;
+}
