@@ -1,7 +1,19 @@
 <header>
   <%= link_to root_path, class: "header-link" do %>
-    <h1>Date Analyzing</h1>
+    <h1>Data Analyzing</h1>
   <% end %>
 
-  <%= link_to "new", new_game_path, class: "data-input-link" %>
+  <div class="header-form">
+
+     <%= link_to "new", new_game_path, class: "data-input-link" %>
+
+     <% if user_signed_in? %>
+       <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "user-data-input-link" %>
+       <span class="user-name"><%= current_user.username %></span>
+     <% else %>
+       <%= link_to "ログイン", new_user_session_path, class: "user-data-input-link" %>
+       <%= link_to "新規登録", new_user_registration_path, class: "user-data-input-link" %>
+     <% end %>
+     
+  </div>
 </header>
